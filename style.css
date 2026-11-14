@@ -3,9 +3,7 @@
    Felles stilark for startside og artikler.
 
   
-   4. Toppmeny (masthead) og lesefremdrift
-   5. Startside: hero, artikkelkort, om-seksjon
-   6. Artikkel: header, bilder, brødtekst, sitat, faktaboks, kilder
+   
    7. XL-artikkel: kapittelnavigasjon og kapitler
    8. Plassholdere (merking av manglende materiale)
    9. Bunntekst
@@ -398,3 +396,195 @@
     text-transform: uppercase;
     margin-bottom: var(--space-1);
   }
+  .about p, .about li { color: var(--ink-soft); font-size: var(--fs-sm); }
+.about ul { padding-left: 1.1em; margin: 0; }
+
+/* 6. Artikkel ------------------------------------------------------------- */
+.article-header {
+  padding-block: var(--space-5) var(--space-4);
+  text-align: left;
+}
+.article-header h1 {
+  font-size: var(--fs-h1);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+.lead {
+  font-family: var(--font-serif);
+  font-size: var(--fs-lead);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 40rem;
+  margin-top: var(--space-3);
+}
+.byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em 1.5em;
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+.byline strong { color: var(--ink); }
+
+/* Bilder */
+.figure { margin: var(--space-4) auto; }
+.figure--hero { margin-top: 0; }
+.figure--hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.figure--wide { width: min(100% - 2.5rem, var(--wide)); }
+.figure--full { width: 100%; }
+.figure--full figcaption { width: min(100% - 2.5rem, var(--wide)); margin-inline: auto; }
+.figure img { width: 100%; background: var(--paper-2); }
+
+figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0.75em;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  padding-top: 0.7em;
+  line-height: 1.45;
+}
+.credit {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+/* Merking for KI-genererte illustrasjoner – skal ALDRI brukes som "ekte" intervjuperson */
+.ai-label {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  padding: 0.1em 0.5em;
+  color: var(--ink);
+}
+
+/* Brødtekst */
+.article-body {
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  padding-bottom: var(--space-5);
+}
+.article-body > * { width: min(100% - 2.5rem, var(--measure)); margin-inline: auto; }
+.article-body > .figure--wide { width: min(100% - 2.5rem, var(--wide)); }
+.article-body > .figure--full { width: 100%; }
+.article-body h2 {
+  font-size: var(--fs-h2);
+  margin-top: var(--space-5);
+}
+.article-body h3 {
+  font-size: var(--fs-h3);
+  margin-top: var(--space-4);
+}
+
+/* Innfelt første bokstav i første avsnitt */
+.article-body > p.dropcap::first-letter {
+  float: left;
+  font-size: 4.2em;
+  line-height: 0.85;
+  padding: 0.06em 0.1em 0 0;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Sitat fra intervju (pull quote) */
+.pullquote {
+  margin-block: var(--space-5);
+  padding: var(--space-3) 0;
+  border-top: 3px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+}
+.pullquote p {
+  font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.25rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5em;
+}
+.pullquote cite {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+/* Blokksitat (f.eks. utdrag fra tale) */
+.blockquote {
+  margin-block: var(--space-4);
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+}
+.blockquote footer {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+/* Faktaboks */
+.factbox {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  background: var(--paper-2);
+  border-top: 3px solid var(--ink);
+  padding: var(--space-3);
+  margin-block: var(--space-4);
+}
+.factbox h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-2);
+}
+.factbox ul { margin: 0; padding-left: 1.1em; }
+.factbox li + li { margin-top: 0.4em; }
+
+/* Kilder og metode */
+.sources {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  border-top: 1px solid var(--ink);
+  padding-top: var(--space-3);
+  margin-top: var(--space-5);
+}
+.sources h2 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 var(--space-2);
+}
+.sources ol, .sources ul { padding-left: 1.2em; }
+.sources li + li { margin-top: 0.4em; }
+
+/* Les også */
+.read-more {
+  background: var(--paper-2);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+.read-more .cards { margin-top: var(--space-3); }
+
+/* 7. XL-artikkel ---------------------------------------------------------- */
+.xl-hero {
+  position: relative;
+  min-height: min(92vh, 900px);
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  overflow: hidden;
+  background: #1b1b1f;
+}
