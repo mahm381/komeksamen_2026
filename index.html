@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portefølje – ITM31719 Kommunikasjonsdesign</title>
+  <meta name="description" content="Digital journalistisk portefølje i ITM31719 Kommunikasjonsdesign, Høgskolen i Østfold.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <!-- ================= TOPPMENY (lik på alle sider) ================= -->
+  <header class="site-header">
+    <div class="container--full site-header__inner">
+      <a class="logo" href="index.html">Portefølje<span>.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Åpne meny">
+        <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="index.html" aria-current="page">Forside</a></li>
+          <li><a href="articles/en-konge-for-alle.html">En konge for alle?</a></li>
+          <li><a href="articles/ung-i-norsk-politikk.html">Ung i politikken</a></li>
+          <li><a href="articles/ki-i-studenthverdagen.html">KI i studiet</a></li>
+          <li><a href="articles/xl-en-konge-for-alle.html">XL-reportasje</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= INTRO ================= -->
+    <section class="container--full front-intro">
+        <div class="front-intro__top fade-up">
+          <span>ITM31719 Kommunikasjonsdesign</span>
+          <span>Høgskolen i Østfold · Eksamen høst <span data-year>2026</span></span>
+        </div>
+        <h1 class="fade-up" style="--delay:.1s">Fortellinger om tilhørighet, makt og ny teknologi</h1>
+        <p class="fade-up" style="--delay:.2s">
+          Fire journalistiske artikler – tre korte og én lang reportasje – om hvem som får plass i fellesskapet,
+          og hvordan vi forholder oss til endringene rundt oss.
+        </p>
+      </section>
+  
+      <!-- ================= HOVEDSAK: XL-ARTIKKEL ================= -->
+      <div class="container--full">
+        <a class="feature" href="articles/xl-en-konge-for-alle.html" data-reveal>
+          <div class="feature__media">
+            <!-- BYTT BILDE: legg eget foto i assets/img/ og endre src + alt -->
+            <img src="assets/img/placeholder-xl.svg" alt="Plassholderbilde for XL-artikkelen" width="1600" height="1000">
+            <span class="badge">XL-reportasje</span>
+          </div>
+          <div>
+            <span class="kicker">Reportasje · Tilhørighet</span>
+            <h2>En konge for alle?</h2>
+            <p class="feature__lead">
+              Om kong Haralds ord og handlinger – og hva de betyr for følelsen av å høre til i Norge.
+            </p>
+            <div class="meta">
+              <span>Av <span class="ph">[Navn Navnesen]</span></span>
+              <span>Ca. 1500 ord</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ================= TRE KORTE ARTIKLER ================= -->
+    <section class="container--full" aria-labelledby="korte">
+        <div class="section-head">
+          <h2 id="korte">Korte artikler</h2>
+          <span>3 saker · 300–500 ord</span>
+        </div>
+  
+        <div class="cards">
+          <a class="card theme-konge" href="articles/en-konge-for-alle.html" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/placeholder-konge.svg" alt="Plassholderbilde for artikkelen En konge for alle?" width="1600" height="1000" loading="lazy">
+            </div>
+            <span class="kicker">Samfunn</span>
+            <h3>En konge for alle?</h3>
+            <p>Hvordan opplever mennesker med minoritetsbakgrunn kong Harald og monarkiet?</p>
+            <div class="meta"><span>Av <span class="ph">[Navn]</span></span></div>
+          </a>
+  
+          <a class="card theme-politikk" href="articles/ung-i-norsk-politikk.html" data-reveal style="--delay:.1s">
+            <div class="card__media">
+              <img src="assets/img/placeholder-politikk.svg" alt="Plassholderbilde for artikkelen Ung i norsk politikk" width="1600" height="1000" loading="lazy">
+            </div>
+            <span class="kicker">Portrett</span>
+            <h3>Ung i norsk politikk</h3>
+            <p>Et portrett av Hashim Abdi og hva det vil si å være ung i politikken.</p>
+            <div class="meta"><span>Av <span class="ph">[Navn]</span></span></div>
+          </a>
