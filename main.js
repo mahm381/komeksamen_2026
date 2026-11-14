@@ -1,19 +1,5 @@
-/* ==========================================================================
-   ITM31719 Kommunikasjonsdesign – felles JavaScript
-   Ren JavaScript uten biblioteker. Alt fungerer også om skriptet ikke lastes
-   (innholdet er da bare synlig uten animasjoner).
 
-   Funksjoner:
-   1. Mobilmeny (hamburger)
-   2. Skygge/linje på toppmeny ved scrolling
-   3. Lesefremdrift (linje øverst) på artikkelsider
-   4. Fade-inn-animasjoner når elementer kommer til syne
-   5. Aktiv kapittel i XL-artikkelens kapittelnavigasjon
-   6. Automatisk ordtelling og lesetid
-   7. Teller for plassholdere (arbeidsverktøy – skru av før levering)
-   ========================================================================== */
-
-/* ---- INNSTILLINGER ----------------------------------------------------- */
+/*  INNSTILLINGER*/
 const SETTINGS = {
     // Sett til false før endelig levering for å skjule den oransje telleren.
     showPlaceholderCounter: true,
@@ -34,7 +20,7 @@ const SETTINGS = {
     setYear();
   });
   
-  /* 1. Mobilmeny ----------------------------------------------------------- */
+  /* 1. Mobilmeny */
   function initNav() {
     const toggle = document.querySelector(".nav-toggle");
     const nav = document.getElementById("site-nav");
@@ -55,7 +41,7 @@ const SETTINGS = {
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
   
-  /* 2. Toppmeny ved scrolling --------------------------------------------- */
+  /* 2. Toppmeny ved scrolling */
   function initHeaderScroll() {
     const header = document.querySelector(".site-header");
     if (!header) return;
@@ -64,7 +50,7 @@ const SETTINGS = {
     window.addEventListener("scroll", update, { passive: true });
   }
   
-  /* 3. Lesefremdrift ------------------------------------------------------- */
+  /* 3. Lesefremdrift */
   function initProgress() {
     const bar = document.querySelector(".progress");
     const article = document.querySelector("[data-article]");
@@ -85,7 +71,7 @@ const SETTINGS = {
     update();
   }
   
-  /* 4. Fade-inn-animasjoner ---------------------------------------------- */
+  /* 4. Fade-inn-animasjoner */
   function initReveal() {
     const items = document.querySelectorAll("[data-reveal]");
     if (!items.length) return;
@@ -107,7 +93,7 @@ const SETTINGS = {
     items.forEach((el) => observer.observe(el));
   }
   
-  /* 5. Aktiv kapittel (XL) ----------------------------------------------- */
+  /* 5. Aktiv kapittel (XL) */
   function initChapterNav() {
     const links = document.querySelectorAll(".chapter-nav a");
     if (!links.length || !("IntersectionObserver" in window)) return;
@@ -133,7 +119,7 @@ const SETTINGS = {
     map.forEach((_, section) => observer.observe(section));
   }
   
-  /* 6. Ordtelling og lesetid ---------------------------------------------- */
+  /* 6. Ordtelling og lesetid */
   /* Teller ord i brødteksten ([data-article-body]), men hopper over
      plassholdere, bildetekster, faktabokser og kildeliste.
      Resultatet skrives inn i elementer med [data-reading-time] og [data-word-count]. */
@@ -169,7 +155,7 @@ const SETTINGS = {
     }
   }
   
-  /* 7. Plassholderteller -------------------------------------------------- */
+  /* 7. Plassholderteller */
   function initPlaceholderCounter() {
     if (!SETTINGS.showPlaceholderCounter) {
       document.body.classList.add("hide-ph");
@@ -194,7 +180,7 @@ const SETTINGS = {
     document.body.appendChild(btn);
   }
   
-  /* Årstall i bunntekst --------------------------------------------------- */
+  /* Årstall i bunntekst */
   function setYear() {
     document.querySelectorAll("[data-year]").forEach((el) => {
       el.textContent = new Date().getFullYear();
