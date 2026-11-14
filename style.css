@@ -2,10 +2,7 @@
    ITM31719 Kommunikasjonsdesign – Eksamensportefølje
    Felles stilark for startside og artikler.
 
-   Innhold:
-   1. Designvariabler (farger, typografi, avstander)
-   2. Reset og grunnstil
-   3. Layout-hjelpere
+  
    4. Toppmeny (masthead) og lesefremdrift
    5. Startside: hero, artikkelkort, om-seksjon
    6. Artikkel: header, bilder, brødtekst, sitat, faktaboks, kilder
@@ -239,4 +236,165 @@
     background: var(--accent);
     transform-origin: 0 50%;
     transform: scaleX(0);
+  }
+  /* 5. Startside ------------------------------------------------------------ */
+.front-intro {
+    padding-block: var(--space-5) var(--space-4);
+    border-bottom: 1px solid var(--ink);
+  }
+  .front-intro__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+  .front-intro h1 {
+    font-size: var(--fs-display);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    max-width: 14ch;
+    margin-bottom: var(--space-3);
+  }
+  .front-intro p {
+    font-size: var(--fs-lead);
+    font-family: var(--font-serif);
+    color: var(--ink-soft);
+    max-width: 38rem;
+  }
+  
+  /* Hovedsak (XL) */
+  .feature {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: var(--space-4);
+    align-items: center;
+    padding-block: var(--space-5);
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+  .feature__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--paper-2);
+  }
+  .feature__media img,
+  .card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s var(--ease);
+  }
+  .feature:hover .feature__media img,
+  .card:hover .card__media img { transform: scale(1.04); }
+  
+  .badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4em 0.75em;
+  }
+  .feature h2 {
+    font-size: var(--fs-h1);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .feature:hover h2 { color: var(--accent); }
+  .feature__lead {
+    font-family: var(--font-serif);
+    font-size: var(--fs-lead);
+    color: var(--ink-soft);
+  }
+  
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em 1.2em;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: var(--space-2);
+  }
+  
+  /* Seksjonstittel */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin: var(--space-5) 0 var(--space-3);
+    padding-top: var(--space-2);
+    border-top: 3px solid var(--ink);
+  }
+  .section-head h2 {
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .section-head span { font-size: var(--fs-sm); color: var(--ink-soft); }
+  
+  /* Artikkelkort */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4) var(--space-3);
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+    margin-bottom: var(--space-2);
+    background: var(--paper-2);
+  }
+  .card h3 {
+    font-size: var(--fs-h3);
+    transition: color 0.2s var(--ease);
+  }
+  .card:hover h3 { color: var(--accent); }
+  .card p { color: var(--ink-soft); font-size: var(--fs-sm); margin-bottom: 0; }
+  .card .kicker { margin-bottom: var(--space-1); }
+  
+  /* Om porteføljen */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+    padding: var(--space-5) 0;
+    border-top: 1px solid var(--ink);
+  }
+  .about h2 { font-size: var(--fs-h2); }
+  .about__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  .about h3 {
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-1);
   }
