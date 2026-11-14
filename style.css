@@ -4,9 +4,7 @@
 
   
    
-   7. XL-artikkel: kapittelnavigasjon og kapitler
-   8. Plassholdere (merking av manglende materiale)
-   9. Bunntekst
+   
    10. Animasjoner
    11. Responsivt (nettbrett / mobil)
    ========================================================================== */
@@ -588,3 +586,124 @@ figcaption {
   overflow: hidden;
   background: #1b1b1f;
 }
+.xl-hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transform: scale(1.05);
+    animation: hero-zoom 14s var(--ease) forwards;
+  }
+  .xl-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 10, 12, 0.88) 0%, rgba(10, 10, 12, 0.25) 55%, rgba(10, 10, 12, 0.1) 100%);
+  }
+  .xl-hero__content {
+    position: relative;
+    z-index: 1;
+    padding-block: var(--space-6) var(--space-5);
+  }
+  .xl-hero .kicker { color: #fff; opacity: 0.85; }
+  .xl-hero h1 {
+    font-size: var(--fs-display);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    max-width: 13ch;
+  }
+  .xl-hero .lead { color: rgba(255, 255, 255, 0.86); }
+  .xl-hero .byline { border-top-color: rgba(255, 255, 255, 0.3); color: rgba(255, 255, 255, 0.8); }
+  .xl-hero .byline strong { color: #fff; }
+  .xl-hero .credit {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1rem;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Kapittelnavigasjon */
+  .chapter-nav {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 40;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .chapter-nav ol {
+    display: flex;
+    gap: var(--space-3);
+    list-style: none;
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    counter-reset: chap;
+  }
+  .chapter-nav ol::-webkit-scrollbar { display: none; }
+  .chapter-nav li { counter-increment: chap; flex-shrink: 0; }
+  .chapter-nav a {
+    font-size: var(--fs-sm);
+    text-decoration: none;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+  }
+  .chapter-nav a::before {
+    content: counter(chap, decimal-leading-zero) " ";
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .chapter-nav a.is-active,
+  .chapter-nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
+  
+  .chapter { padding-top: var(--space-2); }
+  .chapter__label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: var(--space-5);
+  }
+  .chapter__label + h2 { margin-top: var(--space-1); }
+  
+  /* Stort mellomtittel-bilde med tekst over (kapittelskille) */
+  .chapter-break {
+    position: relative;
+    margin-block: var(--space-5);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: #222;
+  }
+  .chapter-break img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+  }
+  .chapter-break blockquote {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: var(--space-3);
+    max-width: 34rem;
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 3rem);
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  
