@@ -5,9 +5,8 @@
   
    
    
-   10. Animasjoner
-   11. Responsivt (nettbrett / mobil)
-   ========================================================================== */
+   
+  
 
 /* 1. Designvariabler ------------------------------------------------------ */
 :root {
@@ -705,5 +704,290 @@ figcaption {
     font-size: clamp(1.6rem, 1.2rem + 2vw, 3rem);
     line-height: 1.15;
     font-weight: 700;
+  }
+  /* 7b. Ekstra komponenter (lyd, galleri, to perspektiver, problemstilling) - */
+
+/* Problemstilling / hovedspørsmål – stort spørsmål midt i teksten */
+.question {
+    font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem);
+    line-height: 1.3;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--accent);
+    margin-block: var(--space-4);
+    padding-left: var(--space-3);
+    border-left: 3px solid var(--accent);
+  }
+  
+  /* Lydklipp fra intervju */
+  .audio-clip {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-1) var(--space-2);
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    background: var(--paper-2);
+    border-left: 4px solid var(--accent);
+    padding: var(--space-2) var(--space-3);
+    margin-block: var(--space-4);
+  }
+  .audio-clip__icon {
+    grid-row: span 2;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+  }
+  .audio-clip__title { font-weight: 700; margin: 0; }
+  .audio-clip audio { width: 100%; grid-column: 1 / -1; margin-top: var(--space-1); }
+  .audio-clip .ph { grid-column: 2; }
+  
+  /* Galleri (f.eks. arkivbilder) */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+    margin-block: var(--space-4);
+  }
+  .gallery .figure { margin: 0; }
+  .gallery img { aspect-ratio: 4 / 5; object-fit: cover; }
+  .gallery-caption {
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    color: var(--ink-soft);
+    margin-top: calc(var(--space-2) * -1);
+  }
+  
+  /* To perspektiver side om side */
+  .versus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin-block: var(--space-4);
+  }
+  .versus__side {
+    border-top: 3px solid var(--accent);
+    padding-top: var(--space-2);
+  }
+  .versus__side:last-child { border-top-color: var(--ink); }
+  .versus__label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-1);
+  }
+  .versus blockquote { margin: 0; }
+  .versus blockquote p {
+    font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem);
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+  .versus cite {
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-size: var(--fs-sm);
+    color: var(--ink-soft);
+  }
+  
+  /* Portrett ved siden av tekst (intervjuperson) */
+  .person {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: var(--space-3);
+    align-items: start;
+    margin-block: var(--space-4);
+  }
+  .person .figure { margin: 0; }
+  .person img { aspect-ratio: 4 / 5; object-fit: cover; }
+  .person__name {
+    font-family: var(--font-sans);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-1);
+  }
+  .person p:last-child { margin-bottom: 0; }
+  
+  @media (max-width: 720px) {
+    .gallery { grid-template-columns: 1fr 1fr; }
+    .versus { grid-template-columns: 1fr; }
+    .person { grid-template-columns: 6rem 1fr; gap: var(--space-2); }
+  }
+  
+  /* 8. Plassholdere --------------------------------------------------------- */
+  /* Alt med klassen .ph er materiale som MÅ erstattes før levering.
+     Oransje stiplet ramme gjør det umulig å overse. */
+  .ph {
+    position: relative;
+    background: var(--placeholder-bg);
+    outline: 2px dashed var(--placeholder);
+    outline-offset: 4px;
+    color: #5a3a10;
+  }
+  p.ph, li.ph, span.ph { padding: 0.15em 0.35em; }
+  /* Plassholdere på mørk bakgrunn (XL-toppbilde, kapittelskille) */
+  .xl-hero .ph, .xl-hero .byline .ph, .chapter-break .ph { color: #5a3a10; }
+  .ph-tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--placeholder);
+    padding: 0.15em 0.5em;
+    margin-right: 0.5em;
+    vertical-align: 0.15em;
+    border-radius: 2px;
+  }
+  .ph-note {
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    border-left: 4px solid var(--placeholder);
+    background: var(--placeholder-bg);
+    color: #5a3a10;
+    padding: var(--space-2) var(--space-3);
+    margin-block: var(--space-3);
+  }
+  .ph-note strong { color: var(--placeholder); }
+  
+  /* Teller nederst i hjørnet (vises bare mens det finnes plassholdere) */
+  .ph-counter {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 90;
+    font-family: var(--font-sans);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    background: var(--placeholder);
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.6em 1em;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  body.hide-ph .ph { outline: none; background: none; color: inherit; }
+  body.hide-ph .ph-tag,
+  body.hide-ph .ph-note { display: none; }
+  
+  /* 9. Bunntekst ------------------------------------------------------------ */
+  .site-footer {
+    background: var(--ink);
+    color: #c9c6bf;
+    padding-block: var(--space-5) var(--space-4);
+    margin-top: var(--space-6);
+    font-size: var(--fs-sm);
+  }
+  .read-more + .site-footer { margin-top: 0; }
+  .site-footer a { color: #fff; }
+  .site-footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-4);
+  }
+  .site-footer .logo { color: #fff; font-size: 1.6rem; }
+  .site-footer h2 {
+    font-family: var(--font-sans);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .site-footer ul { list-style: none; padding: 0; margin: 0; }
+  .site-footer li + li { margin-top: 0.4em; }
+  .site-footer__bottom {
+    margin-top: var(--space-4);
+    padding-top: var(--space-2);
+    border-top: 1px solid #33363b;
+    font-size: var(--fs-xs);
+    color: #8d8a84;
+  }
+  
+  /* 10. Animasjoner --------------------------------------------------------- */
+  /* Elementer med data-reveal fades inn når de kommer til syne (styres av main.js).
+     Uten JavaScript er alt synlig som vanlig. */
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+    transition-delay: var(--delay, 0s);
+  }
+  .js [data-reveal].is-visible { opacity: 1; transform: none; }
+  
+  @keyframes hero-zoom { to { transform: scale(1); } }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .fade-up { animation: fade-up 0.9s var(--ease) both; animation-delay: var(--delay, 0s); }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .js [data-reveal] { opacity: 1; transform: none; }
+  }
+  
+  /* 11. Responsivt ---------------------------------------------------------- */
+  @media (max-width: 960px) {
+    .feature { grid-template-columns: 1fr; gap: var(--space-3); }
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .about { grid-template-columns: 1fr; }
+    .site-footer__grid { grid-template-columns: 1fr 1fr; }
+    .site-footer__grid > :first-child { grid-column: 1 / -1; }
+  }
+  
+  @media (max-width: 720px) {
+    :root { --header-h: 56px; }
+  
+    .nav-toggle { display: block; }
+    .nav {
+      position: fixed;
+      inset: var(--header-h) 0 auto 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      transform: translateY(-110%);
+      visibility: hidden;
+      transition: transform 0.35s var(--ease), visibility 0.35s;
+      z-index: -1;
+    }
+    .nav.is-open { transform: none; visibility: visible; }
+    .nav ul { flex-direction: column; gap: 0; padding: var(--space-1) 1.25rem var(--space-3); }
+    .nav a { display: block; padding: 0.9rem 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+  
+    .cards { grid-template-columns: 1fr; }
+    .about__cols { grid-template-columns: 1fr; }
+    .site-footer__grid { grid-template-columns: 1fr; }
+    .figure--hero img { aspect-ratio: 4 / 3; }
+    .xl-hero { min-height: 85vh; }
+    .chapter-break { min-height: 45vh; }
+    .ph-counter { left: 1rem; right: auto; }
+  }
+  
+  /* Utskrift – nyttig om sensor vil skrive ut */
+  @media print {
+    .site-header, .chapter-nav, .ph-counter, .read-more, .site-footer, .nav-toggle { display: none !important; }
+    body { background: #fff; }
+    .xl-hero { color: #000; min-height: 0; background: none; }
+    .xl-hero::after, .xl-hero__img { display: none; }
+    .js [data-reveal] { opacity: 1; transform: none; }
   }
   
