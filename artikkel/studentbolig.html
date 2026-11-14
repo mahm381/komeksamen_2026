@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jakten på et hjem – Portefølje</title>
+  <meta name="description" content="Hvordan er det å finne et sted å bo som student – og hva gjør boligsituasjonen med studiehverdagen?">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="theme-bolig">
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <!-- ================= TOPPMENY (lik på alle sider) ================= -->
+  <header class="site-header">
+    <div class="container--full site-header__inner">
+      <a class="logo" href="../index.html">Portefølje<span>.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Åpne meny">
+        <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="../index.html">Forside</a></li>
+          <li><a href="studentbolig.html" aria-current="page">Studentbolig</a></li>
+          <li><a href="ung-i-norsk-politikk.html">Ung i politikken</a></li>
+          <li><a href="ki-i-studenthverdagen.html">KI i studiet</a></li>
+          <li><a href="xl-en-konge-for-alle.html">XL-reportasje</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <article data-article>
+      <!-- ============ ARTIKKELHODE ============ -->
+      <header class="container article-header">
+        <span class="kicker fade-up">Studentliv</span>
+        <h1 class="fade-up" style="--delay:.08s">Jakten på et hjem</h1>
+        <p class="lead fade-up" style="--delay:.16s">
+          Hvordan er det å finne et sted å bo som student – og hva gjør boligsituasjonen med studiehverdagen?
+        </p>
+        <div class="byline fade-up" style="--delay:.24s">
+          <span>Tekst: <strong class="ph">[Navn]</strong></span>
+          <span>Foto: <strong class="ph">[Navn]</strong></span>
+          <span class="ph">[Publisert dato]</span>
+          <span data-reading-time>Lesetid</span>
+        </div>
+      </header>
+
+      <!-- ============ TOPPBILDE ============
+           Forslag: eget foto av en student med flytteesker, en hybel eller et studentboligbygg. -->
+      <figure class="figure figure--hero figure--wide" data-reveal>
+        <img src="../assets/img/placeholder-bolig.svg" alt="Plassholderbilde – erstatt med eget foto" width="1600" height="1000">
+        <figcaption>
+          <span class="ph">[Bildetekst: hvem/hva vises, hvor og når.]</span>
+          <span class="credit">Foto: <span class="ph">[Fotograf]</span></span>
+        </figcaption>
+      </figure>
+
+      <!-- ============ BRØDTEKST (300–500 ord) ============ -->
+      <div class="article-body" data-article-body data-target-words="300–500">
+        <aside class="ph-note">
+          <strong>Veiledning – artikkel 1 (300–500 ord):</strong>
+          Hook (~60) → Bakgrunn med tall (~90) → To studenter (~150) → Studentbolig eller privat leie? (~80) → SiØ svarer (~70) → Avslutning (~40).
+          Intervju 2 studenter (gjerne én i studentbolig og én på det private markedet) og én person fra Studentsamskipnaden i Østfold (SiØ).
+          Tallene merket «Verifiser» er hentet fra kildene i kildelista – sjekk dem mot originaldokumentet før levering.
+          Slett denne boksen når artikkelen er ferdig.
+        </aside>
+
+        <!-- ===== 1. HOOK ===== -->
+        <p class="dropcap ph"><span class="ph-tag">Hook</span>[Scene fra en av studentene dere intervjuer: flyttedagen, en visning med mange andre søkere, eller en e-post om venteliste. Bare det dere faktisk har sett eller fått fortalt.]</p>
+
+        <p class="question">Hvor vanskelig er det egentlig å finne et sted å bo som student?</p>
+
+        <!-- ===== 2. BAKGRUNN ===== -->
+        <h2>Få studentboliger</h2>
+        <p class="ph"><span class="ph-tag">Verifiser</span>Ifølge Norsk studentorganisasjons (NSO) studentboligundersøkelse for 2026 er den nasjonale dekningsgraden for studentboliger 15,28 prosent, opp fra 15,11 prosent året før. Det betyr at det finnes studentbolig til rundt 15 av 100 studenter. NSO mener dekningsgraden bør være minst 20 prosent.</p>
+        <p class="ph"><span class="ph-tag">Verifiser</span>I Østfold har det blitt bygget mange studentboliger det siste tiåret. Ifølge Studentsamskipnaden i Østfold (SiØ) økte dekningsgraden fra 4,4 prosent høsten 2013 til 15,6 prosent høsten 2021.</p>
+        <p class="ph">[Hvordan er situasjonen i Halden og Fredrikstad nå? Spør SiØ om dagens tall og ventelister.]</p>
+
+        <!-- ===== 3. STUDENTENE ===== -->
+        <h2 class="ph">[Mellomtittel, f.eks. et kort sitat fra en av studentene]</h2>
+
+        <div class="person" data-reveal>
+          <figure class="figure">
+            <img src="../assets/img/placeholder-portrett.svg" alt="Plassholder – portrett av student 1" loading="lazy" width="800" height="1000">
+            <figcaption><span class="credit">Foto: <span class="ph">[Fotograf]</span></span></figcaption>
+          </figure>
+          <div>
+            <p class="person__name ph">[Navn, alder, studieprogram]</p>
+            <p class="ph">[Student 1 – f.eks. bor i studentbolig. Hvordan fikk hen plass, hvor lenge måtte hen vente, hva betaler hen, og hvordan er det å bo der?]</p>
+          </div>
+        </div>
+
+        <div class="person" data-reveal>
+          <figure class="figure">
+            <img src="../assets/img/placeholder-portrett.svg" alt="Plassholder – portrett av student 2" loading="lazy" width="800" height="1000">
+            <figcaption><span class="credit">Foto: <span class="ph">[Fotograf]</span></span></figcaption>
+          </figure>
+          <div>
+            <p class="person__name ph">[Navn, alder, studieprogram]</p>
+            <p class="ph">[Student 2 – f.eks. leier privat eller bor hjemme og pendler. Hva var vanskelig med å finne bolig, og hvordan påvirker det økonomien og studiene?]</p>
+          </div>
+        </div>
+
+        <!-- ===== 4. STUDENTBOLIG ELLER PRIVAT? ===== -->
+        <h2>Studentbolig eller privat leie?</h2>
+        <div class="versus" data-reveal>
+          <div class="versus__side">
+            <span class="versus__label">Studentbolig</span>
+            <blockquote>
+              <p class="ph">[Ordrett sitat fra studenten som bor i studentbolig]</p>
+              <cite>— <span class="ph">[Navn, alder]</span></cite>
+            </blockquote>
+          </div>
+          <div class="versus__side">
+            <span class="versus__label">Privat leie</span>
+            <blockquote>
+              <p class="ph">[Ordrett sitat fra studenten som leier privat]</p>
+              <cite>— <span class="ph">[Navn, alder]</span></cite>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- ===== 5. SiØ SVARER ===== -->
+        <h2>Hva sier samskipnaden?</h2>
+        <p class="ph">[Intervju med SiØ: Hvor mange står på venteliste nå? Hva koster en studentbolig? Er det planer om å bygge flere?]</p>
+
+        <blockquote class="pullquote" data-reveal>
+          <p class="ph">[Ordrett sitat fra SiØ]</p>
+          <cite>— <span class="ph">[Navn, stilling]</span>, Studentsamskipnaden i Østfold</cite>
+        </blockquote>
+
+        <aside class="factbox" data-reveal>
+          <h3>Studentboliger i tall</h3>
+          <ul>
+            <li class="ph"><span class="ph-tag">Verifiser</span>Nasjonal dekningsgrad 2026: 15,28 prosent (2025: 15,11 prosent). Kilde: NSO.</li>
+            <li class="ph"><span class="ph-tag">Verifiser</span>NSOs mål: minst 20 prosent dekningsgrad nasjonalt. Kilde: NSO.</li>
+            <li class="ph"><span class="ph-tag">Verifiser</span>2 366 nye hybelenheter i 2025. Kilde: Regjeringen.</li>
+            <li class="ph">[SiØs dekningsgrad og antall boliger i dag – kilde: SiØ eller NSO 2026]</li>
+          </ul>
+        </aside>
+
+        <!-- ===== 6. AVSLUTNING ===== -->
+        <p class="ph"><span class="ph-tag">Avslutning</span>[Gå tilbake til studenten fra hooken: Fant hen et sted å bo? Hva tenker hen om neste semester?]</p>
+
+        <!-- ============ KILDER ============ -->
+        <section class="sources" aria-labelledby="kilder">
+          <h2 id="kilder">Kilder</h2>
+          <ol>
+            <li>Norsk studentorganisasjon (2026). <em>Studentboligundersøkelsen 2026.</em> student.no.</li>
+            <li>Norsk studentorganisasjon (2025). <em>Studentboligundersøkelsen 2025.</em> student.no.</li>
+            <li>Studentsamskipnaden i Østfold (2021). <em>Innspill til campusutviklingsplan for Halden.</em> hiof.no.</li>
+            <li>Regjeringen. <em>Rekordår for studentboliger i Norge.</em> regjeringen.no.</li>
+            <li class="ph">[Intervju: Navn, student ved HiØ. Gjennomført dato.]</li>
+            <li class="ph">[Intervju: Navn, student ved HiØ. Gjennomført dato.]</li>
+            <li class="ph">[Intervju: Navn, stilling, SiØ. Gjennomført dato.]</li>
+          </ol>
+          <p class="ph">[Legg til full URL og «hentet dato» for hver skriftlig kilde.]</p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <!-- ================= LES OGSÅ ================= -->
+  <aside class="read-more" aria-labelledby="les-ogsa">
+    <div class="container--full">
+      <div class="section-head" style="margin-top:0">
+        <h2 id="les-ogsa">Les også</h2>
+        <a href="../index.html">Til forsiden →</a>
+      </div>
+      <div class="cards">
+        <a class="card theme-politikk" href="ung-i-norsk-politikk.html" data-reveal>
+          <div class="card__media">
+            <img src="../assets/img/placeholder-politikk.svg" alt="Plassholderbilde for artikkelen Ung i norsk politikk" width="1600" height="1000" loading="lazy">
+          </div>
+          <span class="kicker">Portrett</span>
+          <h3>Ung i norsk politikk</h3>
+          <p>Et portrett av Hashim Abdi og hva det vil si å være ung i politikken.</p>
+        </a>
+
+        <a class="card theme-ki" href="ki-i-studenthverdagen.html" data-reveal style="--delay:.1s">
+          <div class="card__media">
+            <img src="../assets/img/placeholder-ki.svg" alt="Plassholderbilde for artikkelen KI i studenthverdagen" width="1600" height="1000" loading="lazy">
+          </div>
+          <span class="kicker">Utdanning</span>
+          <h3>KI i studenthverdagen</h3>
+          <p>Hjelpemiddel eller snarvei? Studenter om bruken av kunstig intelligens.</p>
+        </a>
+
+        <a class="card theme-xl" href="xl-en-konge-for-alle.html" data-reveal style="--delay:.2s">
+          <div class="card__media">
+            <img src="../assets/img/placeholder-xl.svg" alt="Plassholderbilde for artikkelen Jakten på et hjem" width="1600" height="1000" loading="lazy">
+          </div>
+          <span class="kicker">XL-reportasje</span>
+          <h3>En konge for alle?</h3>
+          <p>Om kong Haralds ord og handlinger – og betydningen for følelsen av tilhørighet.</p>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= BUNNTEKST (lik på alle sider) ================= -->
+  <footer class="site-footer">
+    <div class="container--full">
+      <div class="site-footer__grid">
+        <div>
+          <a class="logo" href="../index.html">Portefølje<span>.</span></a>
+          <p>Eksamensportefølje i ITM31719 Kommunikasjonsdesign ved Høgskolen i Østfold.</p>
+        </div>
+        <div>
+          <h2>Artikler</h2>
+          <ul>
+            <li><a href="studentbolig.html">Studentbolig</a></li>
+            <li><a href="ung-i-norsk-politikk.html">Ung i norsk politikk</a></li>
+            <li><a href="ki-i-studenthverdagen.html">KI i studenthverdagen</a></li>
+            <li><a href="xl-en-konge-for-alle.html">XL: En konge for alle?</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Om</h2>
+          <ul>
+            <li><a href="../index.html#om">Om porteføljen</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        © <span data-year>2026</span> · Studentarbeid, Høgskolen i Østfold. Bilder tilhører fotografene som er oppgitt.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
