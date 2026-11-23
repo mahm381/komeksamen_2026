@@ -186,4 +186,39 @@ const SETTINGS = {
       el.textContent = new Date().getFullYear();
     });
   }
-  
+  /* 8. Tall som teller opp i statistikkboksen ------------------------------ */
+document.addEventListener("DOMContentLoaded", () => {
+  const nums = document.querySelectorAll("[data-count]");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Uten animasjon står de riktige tallene allerede i HTML-en
+  if (!nums.length || reduce || !("IntersectionObserver" in window)) return;
+
+  const run = (el) => {
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals || "0", 10);
+    const suffix = el.dataset.suffix || "";
+    const fmt = new Intl.NumberFormat("nb-NO", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start) / 1400, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // rask start, myk slutt
+      el.textContent = fmt.format(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        run(entry.target);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  nums.forEach((el) => io.observe(el));
+});

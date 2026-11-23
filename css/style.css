@@ -917,7 +917,63 @@ figcaption {
     font-size: var(--fs-xs);
     color: #8d8a84;
   }
-  
+  /* Statistikkboks (XL: Norge i tall) ------------------------------------ */
+.stats {
+  background: var(--ink);
+  color: #f3f1ec;
+  border-radius: 12px;
+  padding: var(--space-4);
+  margin-block: var(--space-4);
+  font-family: var(--font-sans);
+}
+.stats__label {
+  font-size: var(--fs-sm);
+  color: #b9b6ae;
+  margin: 0 0 var(--space-3);
+}
+.stats__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3) var(--space-4);
+}
+.stat__num {
+  display: block;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+}
+.stat__text {
+  display: block;
+  font-size: var(--fs-sm);
+  color: #b9b6ae;
+  margin-top: 0.4rem;
+}
+.stats__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+}
+.stats__note { font-size: var(--fs-sm); color: #b9b6ae; }
+.stats__source {
+  font-size: var(--fs-sm);
+  color: #b9b6ae;
+  margin: var(--space-3) 0 0;
+}
+.stats__source a { color: #fff; text-decoration-style: dotted; }
+
+@media (max-width: 720px) {
+  .stats { padding: var(--space-3); }
+  .stats__grid { grid-template-columns: 1fr; }
+  .stats__total { flex-direction: column; align-items: flex-start; }
+}
+
   /* 10. Animasjoner --------------------------------------------------------- */
   /* Elementer med data-reveal fades inn når de kommer til syne (styres av main.js).
      Uten JavaScript er alt synlig som vanlig. */
