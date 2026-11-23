@@ -970,7 +970,100 @@ figcaption {
   margin-top: var(--space-5);
 }
 .section-kicker + h2 { margin-top: var(--space-1); }
+/* Talescenen ---------------------------------------------------------- */
+.speech-scene {
+  --p: 0;                        /* 0 → 1 mens man scroller (settes av main.js) */
+  position: relative;
+  height: 260vh;                 /* hvor lenge scenen varer */
+  background: #0d0d0f;
+}
+.speech-scene__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.speech-scene__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;   /* viser ansiktet */
+  transform: scale(calc(1.15 - 0.15 * var(--p)));
+  filter: brightness(0.55); }
 
+
+.speech-scene__sticky::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%);
+}
+.speech-scene__text {
+  position: relative;
+  z-index: 1;
+  max-width: 42rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+.speech-scene__kicker {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: var(--space-3);
+}
+/* Talescenen scroller som vanlig (ikke fast) */
+.speech-scene { height: auto; }
+.speech-scene__sticky { position: relative; height: 100vh; min-height: 560px; }
+.speech-scene__line {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 1.1rem + 2.2vw, 3rem);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 0.4em;
+}
+.speech-scene__by {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.06em;
+  margin-top: var(--space-2);
+}
+.speech-scene__credit {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1rem;
+  z-index: 1;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* Linjene er dempet til de «slås på» (bare når JavaScript virker) */
+.js .speech-scene__line {
+  opacity: 0.12;
+  transform: translateY(12px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.js .speech-scene__by { opacity: 0; transition: opacity 0.7s var(--ease); }
+.js .speech-scene__line.is-on,
+.js .speech-scene__by.is-on { opacity: 1; transform: none; }
+
+/* For lesere som har skrudd av animasjoner: vis alt med en gang */
+@media (prefers-reduced-motion: reduce) {
+  .speech-scene { height: auto; }
+  .speech-scene__sticky { position: relative; height: auto; min-height: 80vh; padding: var(--space-6) 0; }
+  .speech-scene__img { transform: none; filter: grayscale(1) brightness(0.45); }
+  .js .speech-scene__line, .js .speech-scene__by { opacity: 1; transform: none; }
+}
 /* Bildetekst under hvert bilde i galleriet */
 .gallery figcaption { flex-direction: column; gap: 0.2em; line-height: 1.4; }
 .gallery .place { font-weight: 600; color: var(--ink); }

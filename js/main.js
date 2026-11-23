@@ -222,3 +222,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   nums.forEach((el) => io.observe(el));
 });
+
+/* 9. Talescenen: bilde og sitat som endres når man scroller -------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const scenes = document.querySelectorAll(".speech-scene");
+  if (!scenes.length) return;
+
+  // Respekter brukere som har skrudd av animasjoner
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    scenes.forEach((s) => s.querySelectorAll("[data-at]").forEach((el) => el.classList.add("is-on")));
+    return;
+  }
+
+  let ticking = false;
+  const update = () => {
+    scenes.forEach((scene) => {
+      const rect = scene.getBoundingClientRect();
+      const total = scene.offsetHeight - window.innerHeight;
+      const p = Math.min(Math.max(-rect.top / total, 0), 1);   // 0 → 1 gjennom scenen
+      scene.style.setProperty("--p", p.toFixed(3));
+      scene.querySelectorAll("[data-at]").forEach((el) => {
+        el.classList.toggle("is-on", p >= parseFloat(el.dataset.at));
+      });
+    });
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+});
