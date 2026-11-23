@@ -34,12 +34,10 @@
 
   <main id="main">
     <article data-article>
-      <!-- ============ FULLSKJERMS TOPPBILDE (HOOK) ============
-           Plan: «Et bilde av kong Harald og et spørsmål som får leseren til å tenke.»
-           Bytt src til et bilde av kongen dere har rett til å bruke (eget foto eller lisensiert
-           arkivbilde, f.eks. NTB). Oppgi alltid fotograf/byrå i .credit. -->
+
+      <!-- ============ TOPPBILDE ============ -->
       <header class="xl-hero">
-        <img class="xl-hero__img" src="../assets/img/placeholder_xl.svg" alt="Plassholderbilde – erstatt med bilde av kong Harald" width="1600" height="1000">
+        <img class="xl-hero__img" src="../assets/img/kongharald7.jpg" alt="Kong Harald kneler under signingen i Nidarosdomen" width="1600" height="1000">
         <div class="container xl-hero__content">
           <span class="kicker fade-up">XL-reportasje · Tilhørighet</span>
           <h1 class="fade-up" style="--delay:.1s">En konge for alle?</h1>
@@ -48,16 +46,16 @@
             blant mennesker med minoritetsbakgrunn i Norge?
           </p>
           <div class="byline fade-up" style="--delay:.3s">
-            <span>Tekst: <strong class="ph">[Navn]</strong></span>
-            <span>Foto: <strong class="ph">[Navn]</strong></span>
-            <span class="ph">[Publisert dato]</span>
+            <span>Tekst: <strong>[Navn]</strong></span>
+            <span>Foto: <strong>[Navn]</strong></span>
+            <span>[Dato]</span>
             <span data-reading-time>Lesetid</span>
           </div>
         </div>
-        <span class="credit">Foto: <span class="ph">[Fotograf / NTB]</span></span>
+        <span class="credit">Foto: [Fotograf / NTB]</span>
       </header>
 
-      <!-- ============ KAPITTELNAVIGASJON ============ -->
+      <!-- ============ KAPITTELMENY ============ -->
       <nav class="chapter-nav" aria-label="Kapitler">
         <ol class="container">
           <li><a href="#hook">Åpning</a></li>
@@ -69,262 +67,311 @@
         </ol>
       </nav>
 
-      <!-- ============ BRØDTEKST (ca. 1500 ord totalt) ============ -->
       <div class="article-body" data-article-body data-target-words="1500">
 
-        <aside class="ph-note">
+        <aside class="intro-box">
           <strong>En tale om hvem vi er</strong>
-          1. september 2016 sto kong Harald foran gjestene under kongeparets hagefest i Slottsparken. Det som begynte som en velkomsttale, utviklet seg til et budskap om mangfold, identitet og fellesskap. 
-          Kongen beskrev et Norge der mennesker har røtter i forskjellige land, snakker ulike språk, tror på forskjellige guder og elsker på forskjellige måter. 
-          Budskapet utfordret forestillingen om at det finnes én bestemt måte å være norsk på.
-      </aside>
-        <!-- ===== 1. ÅPNING (HOOK) ===== -->
-        <section class="chapter" id="hook">
-          <span class="chapter__label">01 · Åpning</span>
-          <p class="dropcap ph"><span class="ph-tag">Åpning ~150 ord</span>«Nordmenn er jenter som er glad i jenter, gutter som er glad i gutter, og jenter og gutter som er glad i hverandre.»</p>
-          <p class="ph">Talen handlet ikke bare om toleranse, men om hvem som får være en del av det norske fellesskapet. Kongen beskrev et samfunn der mennesker med ulik bakgrunn ikke står utenfor nasjonen, men er en del av den.
-
-            Ti år senere er spørsmålet fortsatt aktuelt: Er Norge blitt det inkluderende samfunnet kongen beskrev, eller finnes det fortsatt et gap mellom idealene og virkeligheten?
-            
-            Dette er et redaksjonelt utkast som kan brukes videre. Det må suppleres med dokumentert mottakelse av talen og intervjuer.</p>
-          <p class="question">Er kongen en konge for alle?</p>
-        </section>
-
-        <!-- ===== 2. BAKGRUNN ===== -->
-        <section class="chapter" id="bakgrunn">
-          <span class="chapter__label">Norge i Tall</span>
-          <h2 class="ph">Her har jeg funnet og kontrollert de nyeste tallene fra Statistisk sentralbyrå (SSB).</h2>
-          <p class="ph"><span class="ph-tag">Bakgrunn ~200 ord</span>[Gi leseren konteksten: kongens rolle som samlende symbol, og et Norge der stadig flere har bakgrunn fra andre land. Bruk tall med kilde (SSB) og fakta fra bakgrunnsundersøkelsene deres.]</p>
-          <p class="ph">[Avsnitt 2 – hva har kongen sagt og gjort om mangfold og tilhørighet? Hver opplysning trenger kilde.]</p>
-        </section>
-      </div>
-      <aside class="stats" data-reveal aria-label="Innvandring i Norge i tall">
-        <p class="stats__label">SSB – per 1. januar 2026</p>
-        <div class="stats__grid">
-          <div>
-            <span class="stat__num" data-count="987120">987 120</span>
-            <span class="stat__text">Innvandrere bosatt i Norge</span>
-          </div>
-          <div>
-            <span class="stat__num" data-count="238507">238 507</span>
-            <span class="stat__text">Norskfødte med innvandrerforeldre</span>
-          </div>
-          <div>
-            <span class="stat__num" data-count="17.5" data-decimals="1" data-suffix=" %">17,5 %</span>
-            <span class="stat__text">Innvandrere, andel av befolkningen</span>
-          </div>
-          <div>
-            <span class="stat__num" data-count="4.2" data-decimals="1" data-suffix=" %">4,2 %</span>
-            <span class="stat__text">Norskfødte med innvandrerforeldre, andel av befolkningen</span>
-          </div>
-        </div>
-        <div class="stats__total">
-          <div>
-            <span class="stat__num" data-count="21.7" data-decimals="1" data-suffix=" %">21,7 %</span>
-            <span class="stat__text">Samlet andel av befolkningen</span>
-          </div>
-          <span class="stats__note">Omtrent én av fem</span>
-        </div>
-        <p class="stats__source">
-          Kilde: <a href="LIM-INN-SSB-ADRESSEN-HER">SSB, oppdatert 5. mars 2026</a>.
-          Samlet prosent er summen av de to avrundede andelene.
-        </p>
-      </aside>
-      <!-- Arkivbilder av kongen (plan: «eldre bilder av kongen som passer til temaet»).
-           Arkivbilder er vanligvis opphavsrettsbeskyttet: bruk bare bilder dere har lov til å bruke,
-           og oppgi fotograf/byrå. -->
-      <div class="container" data-reveal>
-        <div class="gallery">
-          <figure class="figure"><img src="../assets/img/placeholder_generic.svg" alt="Plassholder – arkivbilde 1" loading="lazy" width="1600" height="1000"></figure>
-          <figure class="figure"><img src="../assets/img/placeholder_generic.svg" alt="Plassholder – arkivbilde 2" loading="lazy" width="1600" height="1000"></figure>
-          <figure class="figure"><img src="../assets/img/placeholder_generic.svg" alt="Plassholder – arkivbilde 3" loading="lazy" width="1600" height="1000"></figure>
-        </div>
-        <p class="gallery-caption"><span class="ph">[Bildetekst for arkivbildene: hva, hvor, årstall.]</span> <span class="credit">Foto: <span class="ph">[Fotograf / byrå]</span></span></p>
-      </div>
-
-      <div class="article-body" data-article-body-cont>
-        <aside class="factbox" data-reveal>
-          <h3>Fakta</h3>
-          <ul>
-            <li class="ph"><span class="ph-tag">Verifiser</span>Kong Harald V ble født 21. februar 1937 og har vært konge siden 17. januar 1991. (Kontroller og oppgi kilde.)</li>
-            <li class="ph">[Tall om innvandrere og norskfødte med innvandrerforeldre – kilde: SSB, oppgi år]</li>
-            <li class="ph">[Annet faktum fra bakgrunnsundersøkelsene – med kilde]</li>
-          </ul>
+          1. september 2016 sto kong Harald foran gjestene under kongeparets hagefest i Slottsparken.
+          Det som begynte som en velkomsttale, utviklet seg til et budskap om mangfold, identitet og fellesskap.
+          Kongen beskrev et Norge der mennesker har røtter i forskjellige land, snakker ulike språk, tror på
+          forskjellige guder og elsker på forskjellige måter. Budskapet utfordret forestillingen om at det
+          finnes én bestemt måte å være norsk på.
         </aside>
 
-        <!-- ===== 3. KONGENS TALE FRA 2016 ===== -->
-        <section class="chapter" id="talen">
-          <span class="chapter__label">03 · Kongens tale fra 2016</span>
-          <h2 class="ph">[Mellomtittel om talen]</h2>
-          <p class="ph"><span class="ph-tag">Talen ~250 ord</span>[Beskriv talen om norsk identitet og mangfold: når, hvor og for hvem den ble holdt. Kontroller dato og sted mot kongehuset.no.]</p>
+        <!-- ===== 01 ÅPNING ===== -->
+        <section class="chapter" id="hook">
+          <span class="chapter__label">01 · Åpning</span>
+          <p class="question">«Nordmenn er jenter som er glad i jenter, gutter som er glad i gutter, og jenter og gutter som er glad i hverandre.»</p>
+          <p>
+            Talen handlet ikke bare om toleranse, men om hvem som får være en del av det norske fellesskapet.
+            Kongen beskrev et samfunn der mennesker med ulik bakgrunn ikke står utenfor nasjonen, men er en del av den.
+            Ti år senere er spørsmålet fortsatt aktuelt: Er Norge blitt det inkluderende samfunnet kongen beskrev,
+            eller finnes det fortsatt et gap mellom idealene og virkeligheten? [Resten av avsnittet ditt]
+          </p>
+        </section>
 
-          <blockquote class="blockquote" data-reveal>
-            <p class="ph"><span class="ph-tag">Ordrett sitat</span>[Lim inn et ordrett utdrag fra talen, kopiert fra den offisielle teksten på kongehuset.no. Ikke gjengi fra hukommelsen.]</p>
-            <footer>— Kong Harald V, <span class="ph">[anledning, dato]</span>. Kilde: <span class="ph">[kongehuset.no, URL]</span></footer>
-          </blockquote>
-          <blockquote class="blockquote" data-reveal>
-            <p>«LIM INN ORDRETT UTDRAG HER»</p>
-            <footer>— Kong Harald V, hagefest i Slottsparken, 1. september 2016. Kilde: kongehuset.no</footer>
-          </blockquote>
-          <!-- VIDEO (valgfritt): legg en lovlig nedlastet/lisensiert videofil i assets/video/ og bruk
-               <video controls src="../assets/video/talen.mp4"></video>. Ikke bygg inn fra eksterne
-               tjenester – prosjektet skal fungere uten internett. -->
+        <!-- ===== 02 BAKGRUNN ===== -->
+        <section class="chapter" id="bakgrunn">
+          <span class="chapter__label">02 · Bakgrunn</span>
+          <span class="section-kicker">Norge i tall</span>
+          <h2>Et Norge i endring</h2>
+          <p>[Avsnitt 1 – bakgrunn: kongens rolle og et Norge i endring.]</p>
+          <p>[Avsnitt 2 – hva kongen har sagt og gjort om mangfold og tilhørighet, med kilde.]</p>
 
-          <p class="ph">[Hvordan ble talen mottatt? Bruk dokumenterte reaksjoner med kilde.]</p>
-          <p class="ph">[Hva sier talen om hvem som er «norsk»? Knytt den til hovedspørsmålet.]</p>
+          <aside class="stats" data-reveal aria-label="Innvandring i Norge i tall">
+            <p class="stats__label">SSB – per 1. januar 2026</p>
+            <div class="stats__grid">
+              <div>
+                <span class="stat__num" data-count="987120">987 120</span>
+                <span class="stat__text">Innvandrere bosatt i Norge</span>
+              </div>
+              <div>
+                <span class="stat__num" data-count="238507">238 507</span>
+                <span class="stat__text">Norskfødte med innvandrerforeldre</span>
+              </div>
+              <div>
+                <span class="stat__num" data-count="17.5" data-decimals="1" data-suffix=" %">17,5 %</span>
+                <span class="stat__text">Innvandrere, andel av befolkningen</span>
+              </div>
+              <div>
+                <span class="stat__num" data-count="4.2" data-decimals="1" data-suffix=" %">4,2 %</span>
+                <span class="stat__text">Norskfødte med innvandrerforeldre, andel av befolkningen</span>
+              </div>
+            </div>
+            <div class="stats__total">
+              <div>
+                <span class="stat__num" data-count="21.7" data-decimals="1" data-suffix=" %">21,7 %</span>
+                <span class="stat__text">Samlet andel av befolkningen</span>
+              </div>
+              <span class="stats__note">Omtrent én av fem</span>
+            </div>
+            <p class="stats__source">
+              Kilde: <a href="LIM-INN-SSB-ADRESSEN">SSB, oppdatert 5. mars 2026</a>.
+              Samlet prosent er summen av de to avrundede andelene.
+            </p>
+          </aside>
         </section>
       </div>
 
-      <!-- ===== KAPITTELSKILLE: stort bilde med sitat =====
-           Bruk et eget foto. Sitatet må være ordrett fra intervju eller tale. -->
-      <div class="chapter-break" data-reveal>
-        <img src="../assets/img/placeholder_xl.svg" alt="" loading="lazy" width="1600" height="1000">
-        <blockquote>
-          <span class="ph">[Kort, sterkt sitat fra et intervju eller talen]</span>
-        </blockquote>
+      <!-- ===== ARKIVBILDER ===== -->
+      <div class="container" data-reveal>
+        <div class="gallery">
+          <figure class="figure">
+            <img src="../assets/img/kong harald 2.jpg" alt="Kong Harald i uniform, sett fra siden" loading="lazy" width="800" height="1000">
+            <figcaption>
+              <span class="place">Kong Harald, [sted], [årstall]</span>
+              <span class="credit">Foto: [fotograf / kilde]</span>
+            </figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="../assets/img/kongharalad3.jpg" alt="Kronprins Harald i dress ved et skrivebord" loading="lazy" width="800" height="1000">
+            <figcaption>
+              <span class="place">Kronprins Harald, [sted], [årstall]</span>
+              <span class="credit">Foto: [fotograf / kilde]</span>
+            </figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="../assets/img/kong_harald.jpg"Kronprins Harald i gallauniform" loading="lazy" width="800" height="1000">
+            <figcaption>
+              <span class="place">Kronprins Harald, [sted], [årstall]</span>
+              <span class="credit">Foto: [fotograf / kilde]</span>
+            </figcaption>
+          </figure>
+        </div>
       </div>
 
       <div class="article-body" data-article-body-cont>
-        <!-- ===== 4. PERSONLIGE ERFARINGER (tre intervjupersoner) =====
-             Portretter: KUN ekte foto av intervjupersonene, tatt med samtykke.
-             De KI-genererte bildene fra konseptskissen skal IKKE brukes her. -->
-        <section class="chapter" id="erfaringer">
-          <span class="chapter__label">04 · Personlige erfaringer</span>
-          <h2 class="ph">[Mellomtittel for erfaringer]</h2>
+        <!-- ===== 03 TALEN ===== -->
+        <section class="chapter" id="talen">
+          <span class="chapter__label">03 · Kongens tale fra 2016</span>
+          <h2>[Slik reagerte Norge og verden]</h2>
+          <p>Kong Haralds tale fra 2016 fikk raskt stor oppmerksomhet. Det som ble sagt under hagefesten i Slottsparken, spredte seg videre gjennom nyhetsmedier og sosiale medier.
 
-          <aside class="ph-note">
-            <strong>Spørsmål fra planen deres:</strong> Føler du deg akseptert og inkludert som norsk? · Hva betyr det for deg å være norsk? ·
-            Føler du at kong Harald representerer mennesker med minoritetsbakgrunn? · Har du hørt talene hans om mangfold og tilhørighet? ·
-            Tror du kongens ord har hatt betydning for hvordan mennesker med minoritetsbakgrunn føler seg inkludert?
-          </aside>
+            Allerede dagen etter skrev VG om hvordan talen ble hyllet på sosiale medier. Mange reagerte positivt på at kongen snakket åpent om mangfold, religion og kjærlighet.
+            
+            Også mennesker med minoritetsbakgrunn uttrykte begeistring. For mange handlet budskapet om noe større enn selve talen: å bli anerkjent som en naturlig del av Norge.
+            
+            Fra Slottsparken til resten av verden
+            
+            Oppmerksomheten stoppet ikke ved Norges grenser. Den 6. september 2016 skrev Dagbladet om hvordan kong Haralds ord ble hyllet internasjonalt.
+            
+            Talen vakte interesse fordi den utfordret tradisjonelle forestillinger om nasjonal identitet. I stedet for å definere nordmenn ut fra opprinnelse eller bakgrunn, la kongen vekt på mangfoldet i samfunnet.
+            
+            Hvem får definere det å være norsk?
+            
+            Kongens budskap åpnet for en bredere forståelse av norsk identitet. Å være norsk handlet ikke nødvendigvis om hvor foreldrene dine kommer fra, hvilken religion du tilhører, eller hvem du elsker.
+            
+            Men selv om talen ble møtt med begeistring, reiste den også et viktig spørsmål: Er det nok at kongen sier at alle hører til, dersom noen fortsatt opplever å bli behandlet som fremmede i sitt eget land?
+            
+            Dette spørsmålet danner utgangspunktet for møtet med tre unge mennesker med minoritetsbakgrunn i neste kapittel.</p>
 
-          <!-- Intervjuperson 1 -->
-          <div class="person" data-reveal>
-            <figure class="figure">
-              <img src="../assets/img/placeholder_portett.svg" alt="Plassholder – portrett av intervjuperson 1" loading="lazy" width="800" height="1000">
-              <figcaption><span class="credit">Foto: <span class="ph">[Fotograf]</span></span></figcaption>
-            </figure>
-            <div>
-              <p class="person__name ph">[Navn, alder]</p>
-              <p class="ph"><span class="ph-tag">Person 1 ~170 ord</span>[Hvem er personen? Bakgrunn, hvor hen bor, hva hen gjør. Hvilken erfaring har personen med å føle seg inkludert i Norge?]</p>
-            </div>
-          </div>
-          <p class="ph">[Hva tenker person 1 om kongen og talen? Bruk direkte og indirekte sitater.]</p>
-
-          <blockquote class="pullquote" data-reveal>
-            <p class="ph">[Ordrett sitat fra intervjuperson 1]</p>
-            <cite>— <span class="ph">[Navn, alder]</span></cite>
+          <blockquote class="blockquote" data-reveal>
+            <p>«[Lim inn ordrett utdrag fra talen, kopiert fra kongehuset.no]»</p>
+            <footer>— Kong Harald V, hagefest i Slottsparken, 1. september 2016. Kilde: kongehuset.no</footer>
           </blockquote>
 
-          <!-- LYDKLIPP: legg filen i assets/audio/ (f.eks. person1.mp3) og fjern plassholderen.
-               Innhent samtykke til publisering av lydopptaket. -->
-          <div class="audio-clip" data-reveal>
-            <span class="audio-clip__icon" aria-hidden="true">▶</span>
-            <p class="audio-clip__title">Hør <span class="ph">[Navn]</span> fortelle</p>
-            <span class="ph">[Kort beskrivelse av klippet, lengde]</span>
-            <audio controls preload="none" src="../assets/audio/person1.mp3">Nettleseren din støtter ikke lydavspilling.</audio>
-          </div>
-
-          <!-- Intervjuperson 2 -->
-          <div class="person" data-reveal>
-            <figure class="figure">
-              <img src="../assets/img/placeholder_portett.svg" alt="Plassholder – portrett av intervjuperson 2" loading="lazy" width="800" height="1000">
-              <figcaption><span class="credit">Foto: <span class="ph">[Fotograf]</span></span></figcaption>
-            </figure>
-            <div>
-              <p class="person__name ph">[Navn, alder]</p>
-              <p class="ph"><span class="ph-tag">Person 2 ~170 ord</span>[Presentér person 2 – gjerne med et annet perspektiv enn person 1.]</p>
-            </div>
-          </div>
-          <p class="ph">[Erfaringene til person 2, med sitater.]</p>
-
-          <!-- Intervjuperson 3 -->
-          <div class="person" data-reveal>
-            <figure class="figure">
-              <img src="../assets/img/placeholder_portett.svg" alt="Plassholder – portrett av intervjuperson 3" loading="lazy" width="800" height="1000">
-              <figcaption><span class="credit">Foto: <span class="ph">[Fotograf]</span></span></figcaption>
-            </figure>
-            <div>
-              <p class="person__name ph">[Navn, alder]</p>
-              <p class="ph"><span class="ph-tag">Person 3 ~160 ord</span>[Presentér person 3 og erfaringene hens.]</p>
-            </div>
-          </div>
-          <p class="ph">[Erfaringene til person 3, med sitater.]</p>
-        </section>
-
-        <!-- ===== 5. REFLEKSJON (ulike meninger + ekspert) ===== -->
-        <section class="chapter" id="refleksjon">
-          <span class="chapter__label">05 · Refleksjon</span>
-          <h2 class="ph">[Mellomtittel for refleksjon]</h2>
-          <p class="ph"><span class="ph-tag">Refleksjon ~300 ord</span>[Sammenlign erfaringene: Hvor er intervjupersonene enige, og hvor er de uenige?]</p>
-
-          <!-- To perspektiver side om side. Bruk bare dersom intervjuene faktisk viser ulike syn. -->
-          <div class="versus" data-reveal>
-            <div class="versus__side">
-              <span class="versus__label ph">[Perspektiv A, f.eks. «Ordene betyr noe»]</span>
-              <blockquote>
-                <p class="ph">[Ordrett sitat]</p>
-                <cite>— <span class="ph">[Navn]</span></cite>
-              </blockquote>
-            </div>
-            <div class="versus__side">
-              <span class="versus__label ph">[Perspektiv B, f.eks. «Ord er ikke nok»]</span>
-              <blockquote>
-                <p class="ph">[Ordrett sitat]</p>
-                <cite>— <span class="ph">[Navn]</span></cite>
-              </blockquote>
-            </div>
-          </div>
-
-          <p class="ph">[Ekspertintervju: Hva er kongens rolle, og hva betyr han for fellesskapet? Presentér eksperten med navn, tittel og arbeidssted.]</p>
-
-          <blockquote class="pullquote" data-reveal>
-            <p class="ph">[Ordrett sitat fra eksperten]</p>
-            <cite>— <span class="ph">[Navn, tittel, institusjon]</span></cite>
-          </blockquote>
-
-          <p class="ph">[Hva kan ord, symboler og representasjon bety for følelsen av å høre til – og hvor går grensene?]</p>
+          <p>[Hvordan ble talen mottatt? Bruk nyhetsartikler med kilde.]</p>
+          <p>[Hva sier talen om hvem som er «norsk»?]</p>
         </section>
       </div>
-            <li>Kongehuset (2016). <em>[Tittel på talen slik den står på nettsiden].</em> kongehuset.no/[resten av adressen]. Hentet [dato].</li>
-      <!-- Avslutningsbilde (plan: «et bilde som illustrerer fellesskap») -->
+
+      <!-- ===== KAPITTELSKILLE ===== -->
+      <div class="chapter-break" data-reveal>
+        <img src="../assets/img/SKILLEBILDE.jpg" alt="" loading="lazy" width="1600" height="1000">
+        <blockquote>[Kort, sterkt sitat fra et intervju eller talen]</blockquote>
+      </div>
+
+      <div class="article-body" data-article-body-cont>
+        <!-- ===== 04 PERSONLIGE ERFARINGER ===== -->
+        <section class="chapter" id="erfaringer">
+          <span class="chapter__label">04 · Personlige erfaringer</span>
+          <h2>[Mellomtittel]</h2>
+
+          <div class="person" data-reveal>
+            <figure class="figure">
+              <img src="../assets/img/interviewper2.jpg" alt="Portrett av [navn]" loading="lazy" width="800" height="1000">
+              <figcaption><span class="credit">Foto: [Fotograf]</span></figcaption>
+            </figure>
+            <div>
+              <p class="person__name">[Abdi, Gulam]</p>
+              <p>Abdi Gulam er født og oppvokst i Norge med foreldre fra Somalia. Hele livet har Norge vært hjemmet hans, men han har likevel opplevd at andre stiller spørsmål ved hvor han egentlig kommer fra.
+
+                – Jeg har alltid sett på meg selv som norsk. Jeg har vokst opp her, gått på norsk skole og snakker norsk. Likevel får jeg ofte spørsmål om hvor jeg egentlig kommer fra, forteller Abdi.
+                
+                Da kong Harald holdt sin tale i 2016, beskrev han et Norge der mennesker med ulik bakgrunn, religion og kultur er en naturlig del av fellesskapet.
+                
+                For Abdi betyr kongens budskap mye.
+                
+                – Jeg synes det var sterkt å høre kongen si at vi alle er en del av Norge. Det viser at det ikke spiller noen rolle hvilken hudfarge du har eller hvor foreldrene dine kommer fra.
+                
+                Samtidig mener han at det fortsatt er en forskjell mellom kongens ord og virkeligheten mange opplever.
+                
+                – Talen var viktig, men det hjelper ikke bare å si at alle er norske. Vi må også føle oss akseptert i hverdagen.
+                
+                For Abdi handler det å være norsk ikke om utseende eller etternavn, men om hvor man føler seg hjemme.
+                
+                – Norge er hjemmet mitt. Jeg burde ikke måtte bevise at jeg hører til her.</p>
+            </div>
+          </div>
+          <p>[Hva tenker person 1 om kongen og talen?]</p>
+
+          <blockquote class="pullquote" data-reveal>
+            <p>«[Ordrett sitat fra person 1]»</p>
+            <cite>— [Navn, alder]</cite>
+          </blockquote>
+
+          <!-- LYDKLIPP: fjern <!-- og --> rundt blokken når lydfilen ligger i assets/audio/
+          <div class="audio-clip" data-reveal>
+            <span class="audio-clip__icon" aria-hidden="true">▶</span>
+            <p class="audio-clip__title">Hør [Navn] fortelle</p>
+            <audio controls preload="none" src="../assets/audio/person1.mp3"></audio>
+          </div>
+          -->
+
+          <div class="person" data-reveal>
+            <figure class="figure">
+              <img src="../assets/img/jobb bilde1 .jpg" alt="Portrett av [navn]" loading="lazy" width="800" height="1000">
+              <figcaption><span class="credit">Foto: [Fotograf]</span></figcaption>
+            </figure>
+            <div>
+              <p class="person__name">[Sara Ahmed, 22]</p>
+              <p>[Fine ord er ikke alltid nok]</p>
+            </div>
+          </div>
+          <p> Sara Ahmed er født og oppvokst i Norge med foreldre fra Pakistan. Hun føler seg norsk, men mener at mennesker med minoritetsbakgrunn fortsatt møter fordommer og utfordringer i samfunnet.
+
+             Jeg synes kong Haralds tale var veldig fin, og budskapet hans var viktig. Men det er forskjell på å si at alle hører til, og å faktisk få alle til å føle det slik, forteller Sara.
+            
+            Hun mener at mange unge med minoritetsbakgrunn fortsatt opplever å bli vurdert ut fra navn, utseende eller religion.
+            
+             Selv om vi er født og oppvokst her, kan vi fortsatt bli sett på som annerledes. Det kan føles som om vi hele tiden må bevise at vi er norske nok.
+            
+            For Sara handler ekte inkludering om hvordan mennesker blir behandlet i hverdagen, ikke bare om hva som blir sagt i offentlige taler.
+            
+             Kongen kan si at Norge er for alle, men det er samfunnet som må vise det gjennom handling. Alle fortjener å føle seg hjemme i landet de har vokst opp i.  </p>
+
+          <div class="person" data-reveal>
+            <figure class="figure">
+              <img src="../assets/img/interviewper4.jpg.png" alt="Portrett av [navn]" loading="lazy" width="800" height="1000">
+              <figcaption><span class="credit">Foto: [Fotograf]</span></figcaption>
+            </figure>
+            <div>
+              <p class="person__name">[Abdullah, 24]</p>
+              <p>Abdullah Ahmad er født og oppvokst i Norge med foreldre fra Pakistan. Han har vokst opp med både norske og pakistanske tradisjoner, og mener at det å ha flere kulturelle tilhørigheter er en styrke.
+
+                 Jeg føler meg både norsk og pakistansk. Norge er landet jeg har vokst opp i, men den pakistanske kulturen er også en viktig del av hvem jeg er. Jeg synes ikke man skal måtte velge mellom de to, forteller Abdullah.
+                
+                Han kjenner seg igjen i kong Haralds budskap fra 2016, der kongen beskrev et Norge med plass til mennesker med ulik bakgrunn, religion og kultur.
+                
+                 Det jeg likte med talen, var at kongen viste at det ikke finnes én bestemt måte å være norsk på. Vi kan ha forskjellige tradisjoner og religioner, men fortsatt høre til i det samme fellesskapet.
+                
+                Abdullah håper at fremtidige generasjoner slipper å føle at de må velge mellom sin norske identitet og familiens kulturelle bakgrunn.
+                
+                 For meg handler tilhørighet om å kunne være seg selv uten å måtte forklare eller forsvare hvem man er. Jeg er stolt av begge kulturene mine, og begge er en del av meg.</p>
+            </div>
+          </div>
+          <p>[Erfaringene til person 3, med sitater.]</p>
+        </section>
+
+        <!-- ===== 05 REFLEKSJON ===== -->
+        <section class="chapter" id="refleksjon">
+          <span class="chapter__label">05 · Refleksjon</span>
+          <h2>En tale, tre ulike perspektiver </h2>
+          <p>Ti år etter kong Haralds tale om mangfold og fellesskap er budskapet fortsatt aktuelt. Abdi Gulam, Sara Ahmed og Abdullah Ahmad har ulike erfaringer med det å være norsk, men de deler et ønske om å bli akseptert for den de er.
+
+            For Abdi handler talen om anerkjennelse. Han mener kongens ord viser at mennesker med minoritetsbakgrunn også er en naturlig del av Norge.
+            
+            Sara har et mer kritisk perspektiv. Hun setter pris på budskapet, men mener at fine ord ikke er nok dersom mennesker fortsatt opplever diskriminering og utenforskap.
+            
+            Abdullah trekker frem betydningen av å kunne tilhøre flere kulturer samtidig. Han mener at norsk identitet ikke trenger å stå i motsetning til familiens kulturelle bakgrunn.
+            
+            Selv om de har ulike synspunkter, er de enige om én ting: Tilhørighet handler ikke bare om hvor man kommer fra, men også om hvordan man blir møtt av samfunnet.</p>
+
+          <div class="versus" data-reveal>
+            <div class="versus__side">
+              <span class="versus__label">Ordene betyr noe</span>
+              <blockquote>
+                <p>«Jeg synes det var sterkt å høre kongen si at vi alle er en del av Norge. Det viser at det ikke spiller noen rolle hvilken hudfarge du har eller hvor foreldrene dine kommer fra.»</p>
+                <cite>— [Abdi Gulam]</cite>
+              </blockquote>
+            </div>
+            <div class="versus__side">
+              <span class="versus__label">Ord er ikke nok</span>
+              <blockquote>
+                <p>«[Kongen kan si at Norge er for alle, men det er samfunnet som må vise det gjennom handling. Alle fortjener å føle seg hjemme i landet de har vokst opp i.]»</p>
+                <cite>— [Sara Ahmed]</cite>
+              </blockquote>
+            </div>
+          </div>
+
+          <p>[Kongens betydning for fellesskapet]</p>
+          <blockquote class="pullquote" data-reveal>
+            <p>«[Kong Haralds tale fra 2016 fikk stor oppmerksomhet fordi han beskrev et Norge der mennesker med ulik bakgrunn, religion og identitet hører til i det samme fellesskapet.
+
+              Johan L. Tønnesson, professor emeritus i sakprosa ved Universitetet i Oslo, har tidligere analysert kongens tale og dens betydning. Talen kan forstås som et eksempel på hvordan et statsoverhode bruker språket til å formidle verdier om nasjonal identitet og fellesskap.
+              
+              Kongen hadde en samlende og symbolsk rolle. Når han beskrev mangfold som en naturlig del av Norge, bidro han til å utfordre en snever forståelse av hvem som kan kalles norsk.
+              
+              Samtidig viser de ulike perspektivene i denne reportasjen at symbolsk inkludering ikke nødvendigvis betyr at alle opplever likeverd i hverdagen.]»</p>
+          </blockquote>
+          <p>«Johan L. Tønnesson, professor i sakprosa, Universitetet i Oslo»</p>
+        </section>
+      </div>
+
+      <!-- ===== AVSLUTNINGSBILDE ===== -->
       <figure class="figure figure--full" data-reveal>
-        <img src="../assets/img/placeholder_generic.svg" alt="Plassholderbilde – erstatt med bilde som viser fellesskap" loading="lazy" width="1600" height="1000">
+        <img src="../assets/img/FELLESSKAP.jpg" alt="[Beskriv bildet]" loading="lazy" width="1600" height="1000">
         <figcaption>
-          <span class="ph">[Bildetekst]</span>
-          <span class="credit">Foto: <span class="ph">[Fotograf]</span></span>
+          <span>[Bildetekst]</span>
+          <span class="credit">Foto: [Fotograf]</span>
         </figcaption>
       </figure>
 
       <div class="article-body" data-article-body-cont>
-        <!-- ===== 6. AVSLUTNING ===== -->
+        <!-- ===== 06 AVSLUTNING ===== -->
         <section class="chapter" id="avslutning">
           <span class="chapter__label">06 · Avslutning</span>
-          <p class="ph"><span class="ph-tag">Avslutning ~100 ord</span>[Oppsummer hva dere fant ut, og knytt tilbake til åpningen. Avslutt med et sitat eller et bilde som blir sittende i leseren.]</p>
+          <p>[Knytt tilbake til åpningen og sitatet. Avslutt med et sitat eller en tanke.]</p>
         </section>
 
-        <!-- ============ KILDER OG METODE ============ -->
+        <!-- ===== KILDER ===== -->
         <section class="sources" aria-labelledby="kilder">
           <h2 id="kilder">Kilder</h2>
           <ol>
-            <li class="ph">[Kongehuset (2016). Tittel på talen. kongehuset.no/URL. Hentet dato.]</li>
-            <li class="ph">[Intervju: Navn, alder. Gjennomført dato, sted.]</li>
-            <li class="ph">[Intervju: Navn, alder. Gjennomført dato, sted.]</li>
-            <li class="ph">[Intervju: Navn, alder. Gjennomført dato, sted.]</li>
-            <li class="ph">[Ekspertintervju: Navn, tittel, institusjon. Gjennomført dato.]</li>
-            <li class="ph">[SSB (år). Tittel. ssb.no/URL. Hentet dato.]</li>
-            <li class="ph">[Arkivbilder: fotograf/byrå, årstall.]</li>
+            <li>Kongehuset (2016). <em>[Tittel på talen]</em>. kongehuset.no/[adresse]. Hentet [dato].</li>
+            <li>Statistisk sentralbyrå (2026). <em>Innvandrere og norskfødte med innvandrerforeldre</em>. ssb.no/[adresse]. Hentet [dato].</li>
+            <li>[Intervju: Navn, alder. Dato, sted.]</li>
+            <li>[Intervju: Navn, alder. Dato, sted.]</li>
+            <li>[Intervju: Navn, alder. Dato, sted.]</li>
+            <li>[Ekspertintervju: Navn, tittel, institusjon. Dato.]</li>
+            <li>[Bilder: fotograf / Wikimedia Commons / NTB, lisens.]</li>
           </ol>
           <h2>Om saken</h2>
-          <p class="ph"><span class="ph-tag">Bekreft</span>
-            Artikkelen bygger på intervjuer med tre personer med minoritetsbakgrunn, et ekspertintervju og kong Haralds offentlige taler.
-            Alle intervjupersoner har samtykket til å bli sitert og avbildet.
-            Illustrasjonene i konseptskissen var KI-genererte plassholdere og er ikke brukt i den publiserte artikkelen.
-          </p>
-          <p class="ph">[Tilpass metodenotatet: når og hvordan intervjuene ble gjort, og om noen er anonymisert og hvorfor.]</p>
+          <p>[Kort om hvordan intervjuene ble gjort, og at alle har samtykket til sitater og bilder.]</p>
         </section>
       </div>
     </article>
+  </main>
   </main>
 
 

@@ -917,6 +917,128 @@ figcaption {
     font-size: var(--fs-xs);
     color: #8d8a84;
   }
+
+/* Bildetekst under hvert bilde i galleriet */
+.gallery figcaption {
+  flex-direction: column;
+  gap: 0.2em;
+  line-height: 1.4;
+}
+.gallery .place {
+  font-weight: 600;
+  color: var(--ink);
+}
+/* ==========================================================================
+   XL-artikkel: svart/hvitt uttrykk
+   ========================================================================== */
+.theme-xl {
+  --accent: #16181b;      /* svart i stedet for lilla */
+  --accent-ink: #ffffff;
+}
+.theme-xl .chapter__label { color: var(--ink-soft); }
+.theme-xl .question { color: var(--ink); border-left-color: var(--ink); }
+
+/* Ingressboks */
+.intro-box {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ink);
+  padding: var(--space-3);
+  margin-block: var(--space-4);
+}
+.intro-box strong {
+  display: block;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.5em;
+}
+
+/* Liten overskrift over seksjoner (f.eks. «Norge i tall») */
+.section-kicker {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: var(--space-5);
+}
+.section-kicker + h2 { margin-top: var(--space-1); }
+
+/* Bildetekst under hvert bilde i galleriet */
+.gallery figcaption { flex-direction: column; gap: 0.2em; line-height: 1.4; }
+.gallery .place { font-weight: 600; color: var(--ink); }
+
+/* Gjør galleri- og portrettbilder svart-hvite (fjern hvis du vil ha farger) */
+.theme-xl .gallery img,
+.theme-xl .person img { filter: grayscale(1); }
+
+/* Ingen oransje merking – teksten i [klammer] må du fortsatt fylle inn */
+.ph { background: none; outline: none; color: inherit; padding: 0; }
+.xl-hero .ph, .xl-hero .byline .ph, .chapter-break .ph { color: inherit; }
+.ph-tag, .ph-counter { display: none; }
+/* ==========================================================================
+   XL-artikkel: svart/hvitt uttrykk
+   ========================================================================== */
+   .theme-xl {
+    --accent: #16181b;      /* svart i stedet for lilla */
+    --accent-ink: #ffffff;
+  }
+  .theme-xl .chapter__label { color: var(--ink-soft); }
+  .theme-xl .question { color: var(--ink); border-left-color: var(--ink); }
+  
+  /* Ingressboks */
+  .intro-box {
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    line-height: 1.7;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ink);
+    padding: var(--space-3);
+    margin-block: var(--space-4);
+  }
+  .intro-box strong {
+    display: block;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.5em;
+  }
+  
+  /* Liten overskrift over seksjoner (f.eks. «Norge i tall») */
+  .section-kicker {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: var(--space-5);
+  }
+  .section-kicker + h2 { margin-top: var(--space-1); }
+  
+  /* Bildetekst under hvert bilde i galleriet */
+  .gallery figcaption { flex-direction: column; gap: 0.2em; line-height: 1.4; }
+  .gallery .place { font-weight: 600; color: var(--ink); }
+  
+  /* Gjør galleri- og portrettbilder svart-hvite (fjern hvis du vil ha farger) */
+  .theme-xl .gallery img,
+  .theme-xl .person img { filter: grayscale(1); }
+  
+  /* Ingen oransje merking – teksten i [klammer] må du fortsatt fylle inn */
+  .ph { background: none; outline: none; color: inherit; padding: 0; }
+  .xl-hero .ph, .xl-hero .byline .ph, .chapter-break .ph { color: inherit; }
+  .ph-tag, .ph-counter { display: none; }
+
   /* Statistikkboks (XL: Norge i tall) ------------------------------------ */
 .stats {
   background: var(--ink);
@@ -973,6 +1095,8 @@ figcaption {
   .stats__grid { grid-template-columns: 1fr; }
   .stats__total { flex-direction: column; align-items: flex-start; }
 }
+
+
 
   /* 10. Animasjoner --------------------------------------------------------- */
   /* Elementer med data-reveal fades inn når de kommer til syne (styres av main.js).
