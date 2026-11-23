@@ -238,8 +238,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const update = () => {
     scenes.forEach((scene) => {
       const rect = scene.getBoundingClientRect();
-      const total = scene.offsetHeight - window.innerHeight;
-      const p = Math.min(Math.max(-rect.top / total, 0), 1);   // 0 → 1 gjennom scenen
+   // 0 → 1 gjennom scenen
+   const p = Math.min(Math.max((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0), 1);
       scene.style.setProperty("--p", p.toFixed(3));
       scene.querySelectorAll("[data-at]").forEach((el) => {
         el.classList.toggle("is-on", p >= parseFloat(el.dataset.at));
@@ -253,4 +253,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { passive: true });
   window.addEventListener("resize", update);
   update();
+});
+
+/* 10. Lydknapp i talescenen --------------------------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".speech-audio");
+  const audio = document.getElementById("kongen-lyd");
+  if (!btn || !audio) return;
+
+  const icon = btn.querySelector(".speech-audio__icon");
+  const text = btn.querySelector(".speech-audio__text");
+
+  const setState = (playing) => {
+    btn.classList.toggle("is-playing", playing);
+    btn.setAttribute("aria-pressed", String(playing));
+    icon.textContent = playing ? "❚❚" : "▶";
+    text.textContent = playing ? "Pause" : "Hør kongen";
+  };
+
+  btn.addEventListener("click", () => {
+    if (audio.paused) audio.play().catch(() => {});
+    else audio.pause();
+  });
+  audio.addEventListener("play", () => setState(true));
+  audio.addEventListener("pause", () => setState(false));
+  audio.addEventListener("ended", () => { audio.currentTime = 0; setState(false); });
+  audio.addEventListener("error", () => {   // vises hvis lydfilen ikke finnes
+    text.textContent = "Lydfil mangler";
+    btn.disabled = true;
+  });
 });

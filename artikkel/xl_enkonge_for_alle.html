@@ -7,7 +7,7 @@
   <meta name="description" content="Reportasje om kong Haralds ord og handlinger og betydningen for følelsen av tilhørighet.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </head>
 <body class="theme-xl">
   <a class="skip-link" href="#main">Hopp til innhold</a>
@@ -203,6 +203,17 @@
 
       <!-- ===== KAPITTELSKILLE ===== -->
          <!-- ===== TALESCENEN: bildet står fast mens sitatet kommer fram ===== -->
+          
+
+         <button class="speech-audio" type="button" aria-pressed="false" aria-label="Hør kong Harald si ordene fra talen">
+          <span class="speech-audio__icon" aria-hidden="true">▶</span>
+          <span class="speech-audio__text">Hør kongen</span>
+        </button>
+        <audio id="kongen-lyd" src="../assets/audio/kongen-tale.mp4" preload="none"></audio>
+
+
+
+
          <section class="speech-scene" aria-label="Utdrag fra kongens tale">
           <div class="speech-scene__sticky">
             <img class="speech-scene__img" src="../assets/img/kongetale.jpg" alt="Kong Harald holder tale fra en talerstol i Slottsparken" loading="lazy">
@@ -211,16 +222,17 @@
 
 
 <p class="speech-scene__line" data-at="0.15">
-  «Det vi kaller hjem,
+  «Det er ikke alltid så lett å si hvor vi er fra,
 </p>
 <p class="speech-scene__line" data-at="0.35">
-  er der hjertet vårt er –
+  hvilken nasjonalitet vi tilhører.
 </p>
 <p class="speech-scene__line" data-at="0.55">
+  det vi kaller hjem, er der hjertet vårt er. 
   og det kan ikke alltid plasseres innenfor landegrenser.»
 </p>
 <p class="speech-scene__by" data-at="0.7">
-  — Kong Harald V
+  — Kong Harald V»
 </p>
 
             </div>
@@ -358,19 +370,48 @@
 
       <!-- ===== AVSLUTNINGSBILDE ===== -->
       <figure class="figure figure--full" data-reveal>
-        <img src="../assets/img/FELLESSKAP.jpg" alt="[Beskriv bildet]" loading="lazy" width="1600" height="1000">
+        <img src="../assets/img/17mainybilde.png" alt="[Beskriv bildet]" loading="lazy" width="1600" height="1000">
         <figcaption>
-          <span>[Bildetekst]</span>
-          <span class="credit">Foto: [Fotograf]</span>
+          <span>FOTO: RYAN KELLY / NTB SCANPIX</span>
+          <span class="credit">NRK 20. mars 2020 </span>
         </figcaption>
       </figure>
 
       <div class="article-body" data-article-body-cont>
         <!-- ===== 06 AVSLUTNING ===== -->
-        <section class="chapter" id="avslutning">
-          <span class="chapter__label">06 · Avslutning</span>
-          <p>[Knytt tilbake til åpningen og sitatet. Avslutt med et sitat eller en tanke.]</p>
-        </section>
+                <!-- ===== 06 AVSLUTNING ===== -->
+                <section class="chapter" id="avslutning">
+                  <span class="chapter__label">06 · Avslutning</span>
+        
+                  <p>Ti år etter at kong Harald sto i Slottsparken, er ordene hans fortsatt et sted å begynne. Men de betyr ikke det samme for alle.</p>
+        
+                  <div class="finale-voices">
+                    <div class="voice" data-reveal>
+                      <span class="voice__name">Abdi</span>
+                      <span class="voice__word">Anerkjennelse</span>
+                      <p class="voice__line">Talen viste at han er en naturlig del av Norge.</p>
+                    </div>
+                    <div class="voice" data-reveal style="--delay:.15s">
+                      <span class="voice__name">Sara</span>
+                      <span class="voice__word">Handling</span>
+                      <p class="voice__line">Fine ord er ikke nok uten endring i hverdagen.</p>
+                    </div>
+                    <div class="voice" data-reveal style="--delay:.3s">
+                      <span class="voice__name">Abdullah</span>
+                      <span class="voice__word">Begge deler</span>
+                      <p class="voice__line">Man kan høre hjemme i flere kulturer samtidig.</p>
+                    </div>
+                  </div>
+        
+                  <p>Kanskje avgjøres det ikke bare i Slottsparken om kongen er en konge for alle, men i hverdagen, i måten vi møter hverandre på.</p>
+        
+                  <p class="finale-question" data-reveal>En konge for <em>alle</em><span class="q">?</span></p>
+        
+                  <blockquote class="finale-quote" data-reveal>
+                    «Norge er hjemmet mitt. Jeg burde ikke måtte bevise at jeg hører til her.»<span class="end-mark" aria-hidden="true"></span>
+                    <cite>— Abdi Gulam</cite>
+                  </blockquote>
+                </section>
 
         <!-- ===== KILDER ===== -->
         
@@ -396,6 +437,7 @@
         Les om hagefesten
       </a>. Hentet 23.11.2026.
     </li>
+
 
     <li>
       Statistisk sentralbyrå (2026).
@@ -461,6 +503,7 @@
     egenprodusert intervju.
   </p>
 </section>
+<span class="speech-scene__credit">Foto: [Fotograf / NTB] · Lyd: [NRK / kilde]</span>
 
       </div>
     </article>
